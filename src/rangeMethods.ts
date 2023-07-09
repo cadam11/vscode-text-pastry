@@ -1,8 +1,9 @@
 "use strict";
 
-import { window as vscodeWindow, Position } from "vscode";
-import { getCursors } from "./utils";
 import { v4 as uuid } from "uuid";
+import { Position, window as vscodeWindow } from "vscode";
+import { getCursors } from "./utils";
+import KSUID = require("ksuid");
 
 export function range(rangeMethod: string[] | ((number) => string[])) {
 	const editor = vscodeWindow.activeTextEditor;
@@ -84,6 +85,14 @@ export function range_uuid(count: number): string[] {
 	let a: string[] = [];
 	for (let i = 0; i < count; ++i) {
 		a.push(uuid().toLowerCase());
+	}
+	return a;
+}
+
+export function range_ksuid(count: number): string[] {
+	let a: string[] = [];
+	for (let i = 0; i < count; ++i) {
+		a.push(KSUID.randomSync().string);
 	}
 	return a;
 }

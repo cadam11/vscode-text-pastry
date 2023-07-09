@@ -46,6 +46,10 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.registerCommand("extension.textPastry.uuid", () =>
 			rangeMethods.range(rangeMethods.range_uuid)
 		),
+
+		vscode.commands.registerCommand("extension.textPastry.ksuid", () =>
+			rangeMethods.range(rangeMethods.range_ksuid)
+		),
 	];
 
 	context.subscriptions.push(...disposables);

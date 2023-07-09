@@ -25,6 +25,7 @@
     "onCommand:extension.textPastry.range",
     "onCommand:extension.textPastry.paste",
     "onCommand:extension.textPastry.uuid",
+    "onCommand:extension.textPastry.ksuid",
     "onCommand:extension.textPastry.wordList"
   ],
   "main": "./out/main.js",
@@ -56,6 +57,10 @@
         "title": "Text Pastry: uuid"
       },
       {
+        "command": "extension.textPastry.ksuid",
+        "title": "Text Pastry: ksuid"
+      },
+      {
         "command": "extension.textPastry.wordList",
         "title": "Text Pastry: Word List"
       }
@@ -80,6 +85,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "ksuid": "^3.0.0",
     "lodash.sortby": "^4.7.0",
     "uuid": "^9.0.0"
   }

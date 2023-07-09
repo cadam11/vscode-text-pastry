@@ -17,6 +17,9 @@ This project is very barebones at the moment. There are a few basic feature issu
 
 ## Release Notes
 
+### 1.4
+Add KSUID feature
+
 ### 1.3.1
 Bugfix: when cancelling out of "Word List" or "Range", don't throw an error
 
